@@ -1,0 +1,22 @@
+{
+  "name": "jskafka",
+  "version": "1.0.0",
+  "description": "基于node-rdkafka封装kafka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jellycheng/jskafka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jellycheng/jskafka/issues"
+  },
+  "homepage": "https://github.com/jellycheng/jskafka#readme",
+  "dependencies": {
+    "node-rdkafka": "^2.16.0"
+  }
+}
