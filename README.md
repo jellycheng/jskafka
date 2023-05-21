@@ -20,8 +20,8 @@ vi package.json
 
 ## 生产者写法1
 ```
-let Producer = require("./producer");
-const myindex = require("./index");
+let Producer = require("jskafka/producer");
+const myindex = require("jskafka/index");
 let counter = new myindex.Counter();
 
 
@@ -111,8 +111,13 @@ ready.then(async ()=>{
     data.forEach((message) => {
       tmpStr = message.value.toString();
       if(tmpStr!=""){
-        const msg = JSON.parse(tmpStr);
-        console.log("消息：", msg);
+        try{
+          const msg = JSON.parse(tmpStr);
+          console.log("消息：", msg);
+        } catch(err) {
+          console.log("json解析失败:"+ tmpStr);
+        }
+       
       } else {
         console.log("空消息：", tmpStr);
       }
