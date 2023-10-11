@@ -80,7 +80,8 @@ let cfg = {
   options: {
     "metadata.broker.list": "localhost:9092",
     "group.id": "goods_service.1",
-    'enable.auto.commit': true
+    'enable.auto.commit': true,
+    'max.poll.interval.ms': 300000
   },
   batchSize: 5
 };
@@ -144,7 +145,8 @@ let cfg = {
   options: {
     "metadata.broker.list": "127.0.0.1:9092",
     "group.id": "goods_service.2",
-    'enable.auto.commit': true
+    'enable.auto.commit': true,
+    'max.poll.interval.ms': 300000
   },
   batchSize: 5
 };
